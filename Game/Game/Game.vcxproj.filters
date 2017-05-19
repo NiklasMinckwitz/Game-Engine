@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\engine\common\transform.cpp" />
+    <ClCompile Include="src\engine\common\gameobject.cpp" />
+    <ClCompile Include="src\engine\window.cpp" />
+    <ClCompile Include="src\engine\engine.cpp" />
+    <ClCompile Include="src\engine\resources\mesh.cpp" />
+    <ClCompile Include="src\engine\resources.cpp" />
+    <ClCompile Include="src\engine\resources\shader.cpp" />
+    <ClCompile Include="src\engine\resources\texture.cpp" />
+    <ClCompile Include="src\engine\graphics\camera.cpp" />
+    <ClCompile Include="src\engine\graphics\meshrenderer.cpp" />
+    <ClCompile Include="src\engine\graphics.cpp" />
+    <ClCompile Include="src\engine\resources\material.cpp" />
+    <ClCompile Include="src\engine\graphics\pointlight.cpp" />
+    <ClCompile Include="src\engine\graphics\directionallight.cpp" />
+    <ClCompile Include="src\engine\input.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\engine\engine.hpp" />
+    <ClInclude Include="include\engine\graphics.hpp" />
+    <ClInclude Include="include\engine\window.hpp" />
+    <ClInclude Include="include\engine\common\gameobject.hpp" />
+    <ClInclude Include="include\engine\graphics\meshrenderer.hpp" />
+    <ClInclude Include="include\engine\graphics\camera.hpp" />
+    <ClInclude Include="include\engine\common\transform.hpp" />
+    <ClInclude Include="include\engine\graphics\pointlight.hpp" />
+    <ClInclude Include="include\engine\graphics\directionallight.hpp" />
+    <ClInclude Include="include\engine\resources\mesh.hpp" />
+    <ClInclude Include="include\engine\resources\texture.hpp" />
+    <ClInclude Include="include\engine\resources\shader.hpp" />
+    <ClInclude Include="include\engine\resources.hpp" />
+    <ClInclude Include="include\engine\libraries\stb_image.h" />
+    <ClInclude Include="include\engine\resources\material.hpp" />
+    <ClInclude Include="include\engine\input.hpp" />
+  </ItemGroup>
+</Project>
