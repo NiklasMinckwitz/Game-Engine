@@ -1,6 +1,6 @@
 # Visual Studio
-.vs
-tmp
+Game/.vs
+Game/tmp
 
 # Prerequisites
 *.d

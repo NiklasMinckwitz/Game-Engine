@@ -10,7 +10,7 @@ class MeshRenderer {
 public:
 	MeshRenderer(Transform* transform);
 
-	void render_geometry(Camera* camera, Shader* shader);
+	void render_geometry(Camera* camera);
 	void render_depth(Shader* shader);
 
 	Mesh* mesh;

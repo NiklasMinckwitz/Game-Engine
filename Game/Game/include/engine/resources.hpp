@@ -14,7 +14,7 @@ namespace engine {
 	Shader* load_shader(std::string path);
 	Texture* load_texture(std::string path);
 
-	Material* create_material();
+	Material* create_material(Shader* shader);
 
 	void clear_resources();
 }

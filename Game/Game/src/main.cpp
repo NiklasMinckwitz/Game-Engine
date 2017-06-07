@@ -29,6 +29,8 @@ int main() {
 	engine::register_button(DOWN_BUTTON, GLFW_KEY_DOWN);
 
 	//load resources
+	Shader* geometry_shader = engine::load_shader("res/shaders/geometry.shader");
+
 	Texture* octostone_albedo = engine::load_texture("res/textures/octostone/octostoneAlbedo.png");
 	Texture* octostone_metallic = engine::load_texture("res/textures/octostone/octostoneRoughness.png");
 	Texture* octostone_normal = engine::load_texture("res/textures/octostone/octostoneNormalc.png");
@@ -41,20 +43,20 @@ int main() {
 	Texture* dirt_metallic = engine::load_texture("res/textures/dirt/roughness.png");
 	Texture* dirt_normal = engine::load_texture("res/textures/dirt/normal.png");
 
-	Material* mat_octostone = engine::create_material();
-	mat_octostone->albedo = octostone_albedo;
-	mat_octostone->specular = octostone_metallic;
-	mat_octostone->normal = octostone_normal;
+	Material* mat_octostone = engine::create_material(geometry_shader);
+	mat_octostone->set_texture("albedo", octostone_albedo);
+	mat_octostone->set_texture("specular", octostone_metallic);
+	mat_octostone->set_texture("normal_map", octostone_normal);
 
-	Material* mat_rubber = engine::create_material();
-	mat_rubber->albedo = rubber_albedo;
-	mat_rubber->specular = rubber_metallic;
-	mat_rubber->normal = rubber_normal;
+	Material* mat_rubber = engine::create_material(geometry_shader);
+	mat_rubber->set_texture("albedo", rubber_albedo);
+	mat_rubber->set_texture("specular", rubber_metallic);
+	mat_rubber->set_texture("normal_map", rubber_normal);
 
-	Material* mat_dirt = engine::create_material();
-	mat_dirt->albedo = dirt_albedo;
-	mat_dirt->specular = dirt_metallic;
-	mat_dirt->normal = dirt_normal;
+	Material* mat_dirt = engine::create_material(geometry_shader);
+	mat_dirt->set_texture("albedo", dirt_albedo);
+	mat_dirt->set_texture("specular", dirt_metallic);
+	mat_dirt->set_texture("normal_map", dirt_normal);
 
 	//Mesh* container_mesh = engine::load_mesh("res/models/container1.obj");
 	//container_mesh->calculate_tbm();

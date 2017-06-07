@@ -22,8 +22,8 @@ namespace engine {
 		return texture;
 	}
 
-	Material* create_material() {
-		Material* material = new Material();
+	Material* create_material(Shader* shader) {
+		Material* material = new Material(shader);
 		resources::materials.push_back(material);
 		return material;
 	}

@@ -157,7 +157,7 @@ namespace graphics {
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 			glEnable(GL_DEPTH_TEST);
 			for (MeshRenderer* mr : components::meshrenderers) {
-				mr->render_geometry(camera, g_buffer_shader);
+				mr->render_geometry(camera);
 			}
 
 			//Second pass: lightning pass
